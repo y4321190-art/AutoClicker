@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f0f12">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="AutoClicker" android:textColor="#5c6ef8" android:textSize="22sp"
+            android:textStyle="bold" android:paddingBottom="12dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:paddingBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Sıralı Mod:" android:textColor="#888899"/>
+            <Switch android:id="@+id/swSeqMode" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="12dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="#1a1a22" android:padding="14dp" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Nokta 1" android:textColor="#e2e2f0" android:textStyle="bold"/>
+                <Button android:id="@+id/btnToggle1" android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Aç" android:textColor="#5c6ef8" android:backgroundTint="#252535"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="8dp">
+                <TextView android:id="@+id/tvCoord1" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="X: —   Y: —" android:textColor="#888899"/>
+                <Button android:id="@+id/btnPick1" android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Nokta Seç" android:textColor="#55cc55" android:backgroundTint="#1e2a1e"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="10dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aralık (ms):" android:textColor="#888899"/>
+                <EditText android:id="@+id/etInterval1" android:layout_width="70dp" android:layout_height="36dp"
+                    android:layout_marginStart="6dp" android:layout_marginEnd="16dp" android:text="100"
+                    android:inputType="number" android:textColor="#e2e2f0" android:background="#252535" android:padding="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Süre (sn,0=∞):" android:textColor="#888899"/>
+                <EditText android:id="@+id/etDuration1" android:layout_width="60dp" android:layout_height="36dp"
+                    android:layout_marginStart="6dp" android:text="0" android:inputType="number"
+                    android:textColor="#e2e2f0" android:background="#252535" android:padding="6dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="#1a1a22" android:padding="14dp" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Nokta 2" android:textColor="#e2e2f0" android:textStyle="bold"/>
+                <Button android:id="@+id/btnToggle2" android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Aç" android:textColor="#5c6ef8" android:backgroundTint="#252535"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="8dp">
+                <TextView android:id="@+id/tvCoord2" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="X: —   Y: —" android:textColor="#888899"/>
+                <Button android:id="@+id/btnPick2" android:layout_width="wrap_content" android:layout_height="36dp"
+                    android:text="Nokta Seç" android:textColor="#55cc55" android:backgroundTint="#1e2a1e"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="10dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aralık (ms):" android:textColor="#888899"/>
+                <EditText android:id="@+id/etInterval2" android:layout_width="70dp" android:layout_height="36dp"
+                    android:layout_marginStart="6dp" android:layout_marginEnd="16dp" android:text="100"
+                    android:inputType="number" android:textColor="#e2e2f0" android:background="#252535" android:padding="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Süre (sn,0=∞):" android:textColor="#888899"/>
+                <EditText android:id="@+id/etDuration2" android:layout_width="60dp" android:layout_height="36dp"
+                    android:layout_marginStart="6dp" android:text="0" android:inputType="number"
+                    android:textColor="#e2e2f0" android:background="#252535" android:padding="6dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:id="@+id/btnGlobal" android:layout_width="match_parent" android:layout_height="52dp"
+            android:layout_marginTop="20dp" android:text="▶ Hepsini Başlat"
+            android:textColor="#ffffff" android:textSize="15sp" android:backgroundTint="#5c6ef8"/>
+    </LinearLayout>
+</ScrollView>
