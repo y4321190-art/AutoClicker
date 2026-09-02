@@ -19,23 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Gradle cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ hashFiles('**/*.gradle*') }}
-
-      - name: Gradle izni ver
-        run: chmod +x gradlew
-
       - name: APK derle
         run: ./gradlew assembleRelease
 
-      - name: Keystore dosyasını oluştur
-        run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
+      - name: Keystore oluştur
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
 
       - name: APK imzala
         run: |
@@ -47,12 +35,7 @@ jobs:
             --out app/build/outputs/apk/release/autoclicker-signed.apk \
             app/build/outputs/apk/release/app-release-unsigned.apk
 
-      - name: APK doğrula
-        run: |
-          $ANDROID_HOME/build-tools/34.0.0/apksigner verify \
-            app/build/outputs/apk/release/autoclicker-signed.apk
-
-      - name: APK'yı artifact olarak yükle
+      - name: APK yükle
         uses: actions/upload-artifact@v4
         with:
           name: autoclicker-signed
