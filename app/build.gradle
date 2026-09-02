@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
 }
+
 android {
     compileSdk 34
     defaultConfig {
@@ -16,8 +17,12 @@ android {
         }
     }
     compileOptions {
-        sourceComp
-git add .
-git commit -m "add app build.gradle"
-git push origin master:main
-OF
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+}
