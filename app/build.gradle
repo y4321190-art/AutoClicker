@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.autoclicker"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceComp
+git add .
+git commit -m "add app build.gradle"
+git push origin master:main
+OF
