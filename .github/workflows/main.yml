@@ -37,8 +37,9 @@ jobs:
             --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
             --ks-key-alias ${{ secrets.KEY_ALIAS }} \
             --key-pass pass:${{ secrets.KEY_PASSWORD }} \
-            --out app/build/outputs/apk/release/autoclicker-signed.apk \
             app/build/outputs/apk/release/app-release-unsigned.apk
+          cp app/build/outputs/apk/release/app-release-unsigned.apk \
+            app/build/outputs/apk/release/autoclicker-signed.apk
 
       - name: APK yükle
         uses: actions/upload-artifact@v4
