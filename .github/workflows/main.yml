@@ -36,7 +36,7 @@ jobs:
           $ANDROID_HOME/build-tools/34.0.0/apksigner sign \
             --ks keystore.jks \
             --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
-            --key-alias ${{ secrets.KEY_ALIAS }} \
+            --ks-key-alias ${{ secrets.KEY_ALIAS }} \
             --key-pass pass:${{ secrets.KEY_PASSWORD }} \
             --out app/build/outputs/apk/release/autoclicker-signed.apk \
             app/build/outputs/apk/release/app-release-unsigned.apk
